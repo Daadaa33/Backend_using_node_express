@@ -11,11 +11,10 @@ server.use('/api/users', userRouter)
 server.use('/api/posts', PostRouter)
 
 
-
 server.get('*',  (req, res) => {
     res.status(404).json({message : `${req.method} ${req.baseUrl} not found!`})
 })
- 
+
 
 // remember express by default cannot parse JSON in request bodies
 

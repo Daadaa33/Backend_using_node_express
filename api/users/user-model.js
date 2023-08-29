@@ -10,18 +10,17 @@ module.exports = {
 };
 
 function find() {
- return db("user");
-   
+ return db('users');
 }
 
 function getById(id) {
-  return db('user')
+  return db('users')
     .where({ id })
     .first();
 }
 
 function getUserPosts(id) {
-    return db('user')
+    return db('users')
         .where({ id })
         .then(user => {
             return db('posts')
@@ -30,7 +29,7 @@ function getUserPosts(id) {
 }
 
 function insert(post) {
-  return db('user')
+  return db('users')
     .insert(post)
     .then(ids => {
       return getById(ids[0]);
@@ -38,13 +37,13 @@ function insert(post) {
 }
 
 function update(id, changes) {
-  return db('user')
+  return db('users')
     .where({ id })
     .update(changes);
 }
 
 function remove(id) {
-  return db('user')
+  return db('users')
     .where('id', id)
     .del()
     

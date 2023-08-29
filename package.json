@@ -1,14 +1,14 @@
 {
-  "name": "node2",
+  "name": "nodejs project two",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
+    "server": "nodemon index.js",
     "resetdb": "knex migrate:rollback && knex migrate:latest && knex seed:run"
   },
-  "author": "Duraan",
+  "author": "Abdikadir qulle",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",

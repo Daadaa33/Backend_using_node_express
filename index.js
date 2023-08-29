@@ -2,7 +2,7 @@
 const server = require('./api/server');
 
 
-const PORT = 4000
+const PORT = process.env.PORT || 4000;
 
 server.listen(PORT, () => {
     console.log(`\n***** server Running on http://localhost:${PORT} ****\n`)
