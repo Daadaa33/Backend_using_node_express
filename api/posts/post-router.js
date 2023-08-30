@@ -33,11 +33,10 @@ router.get('/:id', async (req, res) => {
     // RETURN THE ARRAY OF USER POSTS
     try{
       const {id} =  postModel.getById(req.params);
-      const {user_id} =postModel.getById(req.body);
+
     }catch(err) {
-      res.status(500).json({message: `faild to find array of users`})
+      res.status(500).json({message: `failed to find array of users`})
     }
-  // this needs a middleware to verify user id
   });
   
 
